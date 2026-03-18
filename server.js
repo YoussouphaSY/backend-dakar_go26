@@ -102,7 +102,7 @@ const limiter = rateLimit({
 app.use(limiter);
 
 // Clé API pour football-data.org
-const API_TOKEN = process.env.FOOTBALL_API_TOKEN || "f75a691df8f24e799f258040f0ab1e8a";
+const API_TOKEN = process.env.FOOTBALL_API_TOKEN || "76089bfff82646f180c57e119b2688ae";
 
 // Simple route de test
 app.get("/", (req, res) => {
