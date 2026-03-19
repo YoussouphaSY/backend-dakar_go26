@@ -94,9 +94,12 @@ const PORT = process.env.PORT || 5000;  // <- IMPORTANT pour Render !!
 // Middleware pour gérer les requêtes CORS
 app.use(cors());
 
+// Trust proxy pour Render (corrige l'erreur X-Forwarded-For)
+app.set('trust proxy', 1);
+
 // Middleware pour limiter les requêtes
 const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, 
+  windowMs: 15 * 60 * 1000,
   max: 100,
 });
 app.use(limiter);
